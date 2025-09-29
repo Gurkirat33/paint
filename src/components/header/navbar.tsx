@@ -2,7 +2,7 @@ import { APP_NAME } from "@/constants";
 import { NavbarData } from "@/data/nav";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { PulsatingButton } from "../ui/pulsating-button";
+import { GradientButton } from "../ui/gradient-button";
 
 export default function Navbar() {
   return (
@@ -21,7 +21,10 @@ export default function Navbar() {
         </div>
 
         {/* CTA button */}
-        <PulsatingButton>Get Free Consultation</PulsatingButton>
+        <div className="flex gap-4">
+          {/* <Button size={"xl"} variant="secondary">Call at (555) 123-4567</Button> */}
+          <Button>Get Free Consultation</Button>
+        </div>
       </div>
     </div>
   );

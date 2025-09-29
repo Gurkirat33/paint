@@ -11,6 +11,7 @@ import {
   Flame,
   Star,
 } from "lucide-react";
+import { AuroraText } from "./ui/aurora-text";
 
 export default function ScrollCta() {
   const offers = [
@@ -24,13 +25,12 @@ export default function ScrollCta() {
     { icon: Star, text: "98% Customer Satisfaction Rate" },
   ];
 
-  // Triple the array for seamless scrolling
   const extendedOffers = [...offers, ...offers, ...offers];
 
   return (
     <div className="primary-color section-container-top overflow-hidden">
       <motion.div
-        className="flex gap-4 whitespace-nowrap py-4"
+        className="flex gap-4 whitespace-nowrap"
         animate={{
           x: [0, -100 * offers.length],
         }}
@@ -47,14 +47,19 @@ export default function ScrollCta() {
           return (
             <div
               key={index}
-              className={`font-semibold px-6 py-4 rounded-xl flex-shrink-0 flex items-center gap-2 ${
-                offer.special
-                  ? "bg-gradient-to-r from-orange-400 to-red-500 text-white shadow-lg scale-[1.03]"
-                  : "bg-white"
+              className={`flex-shrink-0 flex items-center gap-2 bg-white font-semibold px-6 py-4 rounded-xl ${
+                offer.special ? "" : "  "
               }`}
             >
-              <Icon size={20} />
-              {offer.text}
+              <Icon
+                size={20}
+                className={offer.special ? "text-orange-700" : ""}
+              />
+              {offer.special ? (
+                <AuroraText className="font-bold">{offer.text}</AuroraText>
+              ) : (
+                offer.text
+              )}
             </div>
           );
         })}
