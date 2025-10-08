@@ -27,7 +27,7 @@ export default function AboutSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
           <h2 className="text-5xl font-semibold text-white/80">
-            Calgary's Best Painters <br />
+            Calgarys Best Painters <br />
             <span className="text-white flex">
               {" "}
               <Quote className="size-3" /> {APP_NAME}{" "}
@@ -38,10 +38,10 @@ export default function AboutSection() {
             Crafting beautiful spaces with care and precision
           </h2> */}
           <p className="text-lg text-gray-200 mt-5 max-w-xl">
-            We’re a local painting and decorating company committed to
-            delivering flawless finishes and a smooth, stress‑free experience.
-            From careful surface preparation to final inspection, we treat your
-            property like our own.
+            Were a local painting and decorating company committed to delivering
+            flawless finishes and a smooth, stress-free experience. From careful
+            surface preparation to final inspection, we treat your property like
+            our own.
           </p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
