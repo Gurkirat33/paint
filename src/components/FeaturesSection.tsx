@@ -1,5 +1,4 @@
 import React from "react";
-import { Badge } from "./ui/badge";
 import Image from "next/image";
 import {
   Paintbrush,
@@ -9,6 +8,7 @@ import {
   RollerCoaster,
   Cable,
 } from "lucide-react";
+import Container from "@/lib/Container";
 
 interface Feature {
   icon: React.ReactNode;
@@ -98,27 +98,25 @@ const features: Feature[] = [
 
 export default function FeaturesSection() {
   return (
-    <div className="primary-color section-container-top">
-      <div className="bg-[#143C47] rounded-xl flex flex-col justify-center items-center p-20">
-        <h2 className="text-white text-center text-5xl font-semibold mt-6">
-          Get More <br /> Appointment Bookings
-        </h2>
-        <p className="mt-5 text-gray-200 max-w-md text-lg text-center">
-          Rank higher, reduce phone calls, and streamline admin — all with a
-          fast, beautiful website tailored to your clinic.
-        </p>
-        <div className="grid grid-cols-3 gap-4 mt-10 max-w-7xls">
-          <FeaturesCol features={features.slice(0, 3)} />
-          <Image
-            src={"/hero-image.jpg"}
-            alt={""}
-            width={400}
-            height={400}
-            className="rounded-xl w-full h-full object-cover"
-          />
-          <FeaturesCol features={features.slice(3)} />
-        </div>
+    <Container variant="blue" padding>
+      <h2 className="text-white text-center text-5xl font-semibold">
+        Professional <br /> Paint & Wallpaper Services
+      </h2>
+      <p className="mt-5 text-gray-200 max-w-md text-lg text-center mx-auto">
+        Transform your space with expert painting and wallpaper installation
+        services. Quality craftsmanship that brings your vision to life.
+      </p>
+      <div className="grid grid-cols-3 gap-4 mt-10 max-w-7xls">
+        <FeaturesCol features={features.slice(0, 3)} />
+        <Image
+          src={"/hero-image.jpg"}
+          alt={""}
+          width={400}
+          height={400}
+          className="rounded-xl w-full h-full object-cover"
+        />
+        <FeaturesCol features={features.slice(3)} />
       </div>
-    </div>
+    </Container>
   );
 }

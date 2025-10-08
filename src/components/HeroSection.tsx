@@ -12,14 +12,14 @@ export default function HeroSection() {
 
   return (
     <div className="primary-color section-container-top">
-      <div className="rounded-xl flex gap-4">
+      <div className="rounded-xl flex flex-col lg:flex-row gap-4">
         {/* Left side */}
-        
-        <div className="w-[55%] tertiary-color rounded-xl px-12 py-16">
+
+        <div className="w-full lg:w-[55%] tertiary-color rounded-xl p-8 lg:px-12 lg:py-16">
           <Badge className="text-sm px-3 py-1.5">
             Transform Your Space Today
           </Badge>
-          <h1 className="text-6xl font-semibold mt-4">
+          <h1 className="text-4xl lg:text-6xl font-semibold mt-4">
             Premium <AuroraText>Paint & Wallpaper</AuroraText> Solutions
           </h1>
           <p className="text-xl mt-5">
@@ -53,7 +53,7 @@ export default function HeroSection() {
           alt=""
           width={880}
           height={600}
-          className="max-h-1/2 h-full overflow-hidden w-[45%] rounded-xl"
+          className="max-h-1/2 h-full overflow-hidden w-full lg:w-[45%] rounded-xl"
         />
       </div>
     </div>

@@ -1,5 +1,9 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import Container from '@/lib/Container';
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -16,13 +20,13 @@ const testimonials = [
   },
   {
     name: 'Jessica Patel',
-    testimonial: 'Working with this team has been a game-changer for our business. From the first consultation, they showed professionalism, creativity, and genuine care for our goals. They didn’t just deliver a service — they provided an experience that made us feel supported at every step. Their attention to detail, responsiveness, and quality were beyond expectations. We’ve already seen measurable improvements in customer engagement and brand presence. I’d recommend them to anyone seeking value, reliability, and long-term growth',
+    testimonial: 'Working with this team has been a game-changer for our business. Their professionalism, creativity, and genuine care made us feel supported at every step.',
     position: 'Homeowner, Cork',
     image: 'https://randomuser.me/api/portraits/women/33.jpg',
   },
   {
     name: 'David Rodriguez',
-    testimonial: "This team exceeded every expectation we had. They listened carefully, understood our vision, and delivered results that were both creative and practical. The process was smooth, communication was clear, and their dedication was obvious at every stage. We’ve already noticed stronger customer engagement and growth. I’d confidently recommend them to any business.",
+    testimonial: "This team exceeded every expectation. They delivered results that were both creative and practical. Communication was clear and their dedication was obvious.",
     position: 'Real Estate Agent',
     image: 'https://randomuser.me/api/portraits/men/62.jpg',
   },
@@ -33,42 +37,99 @@ const testimonials = [
     image: 'https://randomuser.me/api/portraits/women/58.jpg',
   },
   {
-    name: 'Sophia Williams',
-    testimonial: 'I was so impressed with the color consultation. They helped me pick the perfect shades for my home office. The result is stunning!',
-    position: 'Freelance Graphic Designer',
-    image: 'https://randomuser.me/api/portraits/women/58.jpg',
+    name: 'James O\'Connor',
+    testimonial: 'Outstanding service from start to finish. The team was punctual, respectful of our home, and delivered exceptional quality work.',
+    position: 'Business Owner, Galway',
+    image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
-    name: 'Sophia Williams',
-    testimonial: 'I was so impressed with the color consultation. They helped me pick the perfect shades for my home office. The result is stunning!',
-    position: 'Freelance Graphic Designer',
-    image: 'https://randomuser.me/api/portraits/women/58.jpg',
+    name: 'Ava Murphy',
+    testimonial: 'The attention to detail was remarkable. Every corner, every edge was perfect. Couldn\'t be happier with our new kitchen!',
+    position: 'Homeowner, Limerick',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+  },
+  {
+    name: 'Liam Walsh',
+    testimonial: 'Fair pricing, excellent workmanship, and they completed the job ahead of schedule. What more could you ask for?',
+    position: 'Property Manager',
+    image: 'https://randomuser.me/api/portraits/men/18.jpg',
   },
 ];
   
 export default function Testimonials() {
-  return (
-    <div className='primary-color section-container-top'> 
-        <div className='bg-purple-800 rounded-xl p-20'>
-            <h2 className='text-5xl font-semibold text-white text-center'>Testimonials</h2>
-            <p className='mt-4 text-lg text-gray-300 text-center'>What our clients say about us</p>
+  // Split testimonials into two rows
+  const row1 = testimonials.slice(0, 4);
+  const row2 = testimonials.slice(4);
+  
+  // Extend arrays for infinite scroll
+  const extendedRow1 = [...row1, ...row1, ...row1];
+  const extendedRow2 = [...row2, ...row2, ...row2];
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className={`bg-gray-100 p-6 rounded-lg shadow-md flex flex-col justify-between ${index === 2 ? "row-span-2" : ""} ${index === 3 ? "row-span-2" : ""}`}>
-                  <p className="text-lg mb-6">{testimonial.testimonial}</p>
-                  <div className="flex items-center">
-                    <Image src={testimonial.image} alt={testimonial.name} width={56} height={56} className="rounded-full mr-4" />
-                    <div>
-                      <p className="font-bold text-gray-800 text-lg">{testimonial.name}</p>
-                      <p className="text-gray-500">{testimonial.position}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
+  const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+    <div className="bg-white p-6 rounded-xl shadow-lg flex-shrink-0 w-[400px] flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+      <p className="text-gray-700 mb-6 italic leading-relaxed">
+        &ldquo;{testimonial.testimonial}&rdquo;
+      </p>
+      <div className="flex items-center gap-3">
+        <Image 
+          src={testimonial.image} 
+          alt={testimonial.name} 
+          width={48} 
+          height={48} 
+          className="rounded-full border-2 border-orange-500" 
+        />
+        <div>
+          <p className="font-bold text-gray-800">{testimonial.name}</p>
+          <p className="text-sm text-gray-500">{testimonial.position}</p>
         </div>
+      </div>
     </div>
-  )
+  );
+
+  return (
+    <Container variant="orange" className='max-w-none py-20'>
+      <div className="text-center mb-12">
+        <h2 className='text-5xl font-bold text-white'>Testimonials</h2>
+        <p className='mt-4 text-xl text-gray-200'>What our clients say about us</p>
+      </div>
+
+      <div className="space-y-6 overflow-hidden">
+        {/* First Row - Scroll Right to Left */}
+        <motion.div
+          className="flex gap-6"
+          animate={{
+            x: [-100 * row1.length, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+          }}
+        >
+          {extendedRow1.map((testimonial, index) => (
+            <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
+          ))}
+        </motion.div>
+
+        {/* Second Row - Scroll Left to Right */}
+        <motion.div
+          className="flex gap-6"
+          animate={{
+            x: [0, -100 * row2.length],
+          }}
+          transition={{
+            duration: 35,
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+          }}
+        >
+          {extendedRow2.map((testimonial, index) => (
+            <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
+          ))}
+        </motion.div>
+      </div>
+    </Container>
+  );
 }

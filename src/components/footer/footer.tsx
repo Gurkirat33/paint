@@ -9,7 +9,7 @@ import {
   Facebook,
 } from "lucide-react";
 import Link from "next/link";
-import { PulsatingButton } from "../ui/pulsating-button";
+import Container from "@/lib/Container";
 
 const footerNavs = [
   {
@@ -44,13 +44,11 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="primary-color section-container-top text-white">
-      <div
-        className="bg-black rounded-xl p-10 md:p-16"
-      >
+    <Container as="footer" variant="black" padding className="text-white">
         <div className="flex justify-between items-center border-b border-gray-600 pb-8">
           <h2 className="text-4xl md:text-5xl font-bold">Get in Touch</h2>
-          <PulsatingButton className="bg-[#40E0D0] hover:bg-[#38c7b7] text-black">Get Started</PulsatingButton>
+          {/* <PulsatingButton className="bg-[#40E0D0] hover:bg-[#38c7b7] text-black">Get Started</PulsatingButton> */}
+          <Button className="bg-[#40E0D0] hover:bg-[#38c7b7] text-black">Get Started</Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-10">
@@ -106,7 +104,6 @@ export default function Footer() {
             ))}
           </div>
         </div>
-      </div>
-    </footer>
+        </Container>
   );
 }

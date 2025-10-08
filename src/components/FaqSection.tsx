@@ -1,3 +1,4 @@
+import Container from '@/lib/Container';
 import { FaqItem } from './ui/FaqItem';
 
 const faqs = [
@@ -20,8 +21,7 @@ const secondColumnFaqs = faqs.slice(6, 12);
 
 export default function FaqSection() {
   return (
-    <section className="primary-color section-container-top">
-      <div className="bg-emerald-700 rounded-xl p-20">
+    <Container variant="green" padding>
         <div className="text-center mb-16">
           <h2 className="text-5xl font-semibold text-white">
             Frequently Asked Questions
@@ -46,7 +46,6 @@ export default function FaqSection() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+        </Container>
   );
 }
