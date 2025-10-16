@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,7 @@ import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
 import { APP_NAME } from "@/constants";
 import { RainbowButton } from "../ui/rainbow-button";
 import MobileNav from "./MobileNav";
+import { cn } from "@/lib/utils";
 
 // Services data
 const services = [
@@ -76,9 +77,27 @@ export default function Navbar() {
     setIsMobileServicesOpen(false);
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="primary-color section-container relative z-50">
-      <div className=" flex justify-between items-center w-full tertiary-color py-3.5 px-4 md:px-10 rounded-xl">
+    <div
+      className={cn(
+        "sticky primary-color p-4 z-50",
+        isScrolled && "!p-0 top-0"
+      )}
+    >
+      <div
+        className={cn(
+          "flex justify-between items-center w-full tertiary-color py-3.5 px-4 md:px-10 rounded-xl",
+          isScrolled && "!rounded-none"
+        )}
+      >
         {/* Logo */}
         <div className="text-xl md:text-2xl font-semibold uppercase">
           {APP_NAME}
