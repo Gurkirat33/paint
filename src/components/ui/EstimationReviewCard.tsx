@@ -52,7 +52,7 @@ export default function EstimationReviewCard() {
     }
   };
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     if (!isAnimating && index !== currentIndex) {
       setIsAnimating(true);
       setCurrentIndex(index);
