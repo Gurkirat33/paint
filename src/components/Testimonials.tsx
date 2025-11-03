@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '@/lib/Container';
 import { motion } from 'framer-motion';
+import SectionHeading from '@/lib/SectionHeading';
 
 const testimonials = [
   {
@@ -87,12 +88,8 @@ export default function Testimonials() {
   );
 
   return (
-    <Container variant="orange" className='max-w-none py-20'>
-      <div className="text-center mb-12">
-        <h2 className='text-5xl font-bold text-white'>Testimonials</h2>
-        <p className='mt-4 text-xl text-gray-200'>What our clients say about us</p>
-      </div>
-
+    <Container variant="deepPurple" className='max-w-none py-20'>
+      <SectionHeading title="Testimonials" description="What our clients say about us"/>
       <div className="space-y-6 overflow-hidden">
         {/* First Row - Scroll Right to Left */}
         <motion.div

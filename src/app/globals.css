@@ -88,6 +88,15 @@
       background-position: 200%;
     }
   }
+  --animate-soft-bounce: soft-bounce 2s ease-in-out infinite;
+  @keyframes soft-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
 }
 
 :root {

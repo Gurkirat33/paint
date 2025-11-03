@@ -1,6 +1,5 @@
 import Container from "@/lib/Container";
 import Image from "next/image";
-import { AuroraText } from "./ui/aurora-text";
 import { Button } from "./ui/button";
 import TrustBadge from "./ui/TrustBadge";
 import { Quote } from "lucide-react";
@@ -23,17 +22,14 @@ export default function AboutSection() {
   ];
 
   return (
-    <Container variant="red" padding>
+    <Container variant="green" padding>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="order-2 md:order-1">
-          <h2 className="text-5xl font-semibold text-white/80">
-            Calgarys Best Painters <br />
-            <span className="text-white flex">
-              {" "}
-              <Quote className="size-3" /> {APP_NAME}{" "}
-              <Quote className="size-3" />
-            </span>
+          <h2 className="text-5xl font-medium text-white">
+            Calgary’s Favourite Painting Experts —{" "}
+            <span className="font-semibold">{APP_NAME}</span>
           </h2>
+
           {/* <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight">
             Crafting beautiful spaces with care and precision
           </h2> */}

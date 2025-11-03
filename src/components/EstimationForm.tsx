@@ -1,15 +1,12 @@
 "use client";
-import { useState, useId } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Phone,
   Calendar,
   CheckCircle,
-  Clock,
-  Mail,
   Loader2,
 } from "lucide-react";
 import TrustBadge from "./ui/TrustBadge";
@@ -62,7 +59,7 @@ export default function EstimationForm() {
 
   if (isSubmitted) {
     return (
-      <Container variant="purple" padding className="text-center">
+      <Container variant="blue" padding className="text-center">
         <div className="max-w-md mx-auto bg-white rounded-xl p-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -94,7 +91,7 @@ export default function EstimationForm() {
   }
   return (
     <Container
-      variant="purple"
+      variant="blue"
       padding
       className="flex flex-col lg:flex-row gap-6"
     >

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Container from "@/lib/Container";
+import SectionHeading from "@/lib/SectionHeading";
 
 const portfolioItems = [
   {
@@ -254,25 +255,11 @@ export default function PortfolioSection({
     ? portfolioItems
     : portfolioItems.slice(0, 8);
   return (
-    <Container variant="black" padding>
+    <Container variant="indigo" padding>
       {/* Header Section */}
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-semibold text-white mb-6">
-          Our Work Speaks
-          <br />
-          <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-            Louder Than Words
-          </span>
-        </h2>
+      <SectionHeading title="Work That Stands Out" description="We turn ordinary spaces into inspiring ones through careful craftsmanship and attention to detail."/>
 
-        <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          From residential homes to commercial spaces, we handle every type of
-          painting and finishing work. Explore our portfolio and see the quality
-          and craftsmanship that sets us apart.
-        </p>
-      </div>
 
-      {/* True Masonry Gallery using CSS columns */}
       <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
         {portfolioItemsList.map((item) => (
           <div key={item.id} className="break-inside-avoid mb-6">

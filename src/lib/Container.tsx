@@ -5,18 +5,22 @@ type ContainerVariant =
   | "blue"
   | "purple"
   | "green"
-  | "orange"
+  | "deepPurple"
   | "black"
-  | "red";
+  | "orange"
+  | "slate"
+  | "indigo";
 
 const variantStyles: Record<ContainerVariant, string> = {
   default: "tertiary-color",
   blue: "bg-[#143C47]",
   purple: "bg-blue-900",
   green: "bg-emerald-700",
-  orange: "bg-purple-800",
+  deepPurple: "bg-purple-800",
   black: "bg-black",
-  red: "bg-orange-900",
+  orange: "bg-orange-900",
+  slate: "bg-slate-800",
+  indigo: "bg-indigo-800",
 };
 
 interface ContainerProps {

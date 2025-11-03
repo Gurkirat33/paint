@@ -1,20 +1,58 @@
 import Container from '@/lib/Container';
 import { FaqItem } from './ui/FaqItem';
+import SectionHeading from '@/lib/SectionHeading';
 
 const faqs = [
-  { question: 'How long will the project take?', answer: 'A standard room can take 1-2 days, but project timelines vary based on the size and complexity. We will provide a detailed schedule with your quote.' },
-  { question: 'Do I need to move my furniture?', answer: 'We can handle moving larger furniture items. We just ask that you clear away any small or fragile items before we arrive.' },
-  { question: 'What kind of paint/wallpaper do you use?', answer: 'We use high-quality, durable paints and materials from trusted brands. We also offer eco-friendly and low-VOC options for a healthier home environment.' },
-  { question: 'Are you insured?', answer: 'Yes, we are fully licensed and insured. We can provide proof of insurance upon request for your peace of mind.' },
-  { question: 'How do you protect my home?', answer: 'We take great care to protect your property. All floors, furniture, and fixtures are covered with drop cloths and plastic sheeting. We also ensure proper ventilation.' },
-  { question: 'What is your process for surface preparation?', answer: 'Proper preparation is key to a lasting finish. Our process includes cleaning walls, filling holes or cracks, sanding surfaces, and applying primer as needed.' },
-  { question: 'Can you help me choose colors or patterns?', answer: 'Absolutely! We offer color and design consultations to help you find the perfect look for your space.' },
-  { question: 'What is the cost of your services?', answer: 'The cost depends on the scope of work, materials selected, and the size of the area. We provide a detailed, no-obligation quote after an initial consultation.' },
-  { question: 'Do you offer a warranty?', answer: 'Yes, we offer a warranty on our workmanship to ensure you are completely satisfied with the results.' },
-  { question: 'How should I prepare for your arrival?', answer: 'Please remove any pictures, decorations, and small items from the rooms being painted. We will handle the rest!' },
-  { question: 'How should I prepare for your arrival?', answer: 'Please remove any pictures, decorations, and small items from the rooms being painted. We will handle the rest!' },
-  { question: 'How should I prepare for your arrival?', answer: 'Please remove any pictures, decorations, and small items from the rooms being painted. We will handle the rest!' },
+  {
+    question: 'How long does a typical painting project take?',
+    answer: 'Most standard rooms are completed within 1–2 days. Larger or more detailed projects may take longer, and we always provide a clear timeline before we start.'
+  },
+  {
+    question: 'Do I need to move furniture or cover anything?',
+    answer: 'We take care of moving and covering large furniture items. We just ask that you remove any personal, fragile, or small decorative items beforehand.'
+  },
+  {
+    question: 'What types of paint and materials do you use?',
+    answer: 'We use premium, long-lasting paints and wallpapers from trusted brands. Eco-friendly and low-VOC options are also available upon request.'
+  },
+  {
+    question: 'Are your painters licensed and insured?',
+    answer: 'Yes, we are fully licensed and insured for residential and commercial projects. We can provide proof of coverage anytime for your peace of mind.'
+  },
+  {
+    question: 'How do you protect my home during the project?',
+    answer: 'We carefully cover floors, furniture, and fixtures with drop cloths and plastic sheeting. We also maintain clean work areas and proper ventilation throughout.'
+  },
+  {
+    question: 'Do you handle prep work like patching or sanding?',
+    answer: 'Absolutely. We clean surfaces, repair cracks or holes, sand as needed, and apply primer to ensure a smooth and durable finish.'
+  },
+  {
+    question: 'Can you help me choose the right colors or wallpaper?',
+    answer: 'Yes! We offer personalized color and design guidance to help you pick the best shades, finishes, or wallpaper patterns for your space.'
+  },
+  {
+    question: 'What areas do you serve?',
+    answer: 'We proudly serve Calgary and surrounding areas for both residential and commercial painting and wallpaper services.'
+  },
+  {
+    question: 'Do you offer exterior painting as well?',
+    answer: 'Yes, we provide both interior and exterior painting services, using weather-resistant materials to ensure a lasting, professional finish.'
+  },
+  {
+    question: 'How much will my project cost?',
+    answer: 'Pricing depends on the size, scope, and materials. We provide a detailed, no-obligation quote after inspecting the space and discussing your goals.'
+  },
+  {
+    question: 'Do you provide a warranty on your work?',
+    answer: 'Yes, all of our projects include a workmanship warranty. We stand behind the quality of our finishes and ensure customer satisfaction.'
+  },
+  {
+    question: 'How should I prepare before the team arrives?',
+    answer: 'Just clear personal items and wall décor from the workspace. We’ll handle all furniture protection, prep, and cleanup so you don’t have to worry about a thing.'
+  },
 ];
+
 
 const firstColumnFaqs = faqs.slice(0, 6);
 const secondColumnFaqs = faqs.slice(6, 12);
@@ -22,18 +60,8 @@ const secondColumnFaqs = faqs.slice(6, 12);
 export default function FaqSection() {
   return (
     <Container variant="green" padding>
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-semibold text-white">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-lg text-gray-300">
-            If you have a question that&apos;s not answered below, please{' '}
-            <a href="#" className="text-white font-medium underline">
-              get in touch
-            </a>
-            .
-          </p>
-        </div>
+       <SectionHeading title="Frequently Asked Questions" description="Everything you need to know before getting started."/>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-4">
             {firstColumnFaqs.map((faq, index) => (

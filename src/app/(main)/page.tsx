@@ -1,4 +1,4 @@
-import Comparison from "@/components/Comparison";
+// import Comparison from "@/components/Comparison";
 import EstimationForm from "@/components/EstimationForm";
 import FaqSection from "@/components/FaqSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -7,6 +7,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import AboutSection from "@/components/AboutSection";
 import ScrollCta from "@/components/ScrollCta";
 import Testimonials from "@/components/Testimonials";
+// import SpecialOfferModal from "@/components/SpecialOfferModal";
 
 export default function page() {
   return (
@@ -15,12 +16,12 @@ export default function page() {
       <ScrollCta />
       <AboutSection />
       <FeaturesSection />
-      <Comparison />
+      {/* <Comparison /> */}
       <EstimationForm />
       <PortfolioSection />
       <Testimonials />
       <FaqSection />
-      {/* About us / portfolio /  image comparison / contact */}
+      {/* <SpecialOfferModal delaySeconds={5} /> */}
     </>
   );
 }
