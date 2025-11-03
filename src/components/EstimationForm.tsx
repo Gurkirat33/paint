@@ -3,12 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Phone,
-  Calendar,
-  CheckCircle,
-  Loader2,
-} from "lucide-react";
+import { Phone, Calendar, CheckCircle, Loader2 } from "lucide-react";
 import TrustBadge from "./ui/TrustBadge";
 import EstimationReviewCard from "./ui/EstimationReviewCard";
 import Container from "@/lib/Container";
@@ -68,7 +63,7 @@ export default function EstimationForm() {
             Thank You!
           </h3>
           <p className="text-gray-600 mb-6">
-            We've received your request and will contact you within 24 hours
+            We have received your request and will contact you within 24 hours
             with your free estimate.
           </p>
           <Button
@@ -126,7 +121,7 @@ export default function EstimationForm() {
             Get Started Today
           </h3>
           <p className="text-gray-600">
-            Fill out the form below and we'll get back to you within 24 hours.
+            Fill out the form below and we will get back to you within 24 hours.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
