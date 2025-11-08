@@ -29,10 +29,6 @@ export default function AboutSection() {
             Calgary’s Favourite Painting Experts —{" "}
             <span className="font-semibold">{APP_NAME}</span>
           </h2>
-
-          {/* <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight">
-            Crafting beautiful spaces with care and precision
-          </h2> */}
           <p className="text-lg text-gray-200 mt-5 max-w-xl">
             Were a local painting and decorating company committed to delivering
             flawless finishes and a smooth, stress-free experience. From careful

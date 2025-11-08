@@ -28,7 +28,7 @@ export default function MobileNav({
   return (
     <>
       {/* Mobile CTA and menu button */}
-      <div className="md:hidden flex items-center gap-3">
+      <div className="md:hidden flex items-center gap-3 py-3">
         <RainbowButton className="text-sm px-4 py-2">
           Get Consultation
         </RainbowButton>

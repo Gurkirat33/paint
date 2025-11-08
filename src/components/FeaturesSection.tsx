@@ -1,13 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Paintbrush,
-  House,
-  Wallpaper,
-  Layers,
-  RollerCoaster,
-  Cable,
-} from "lucide-react";
 import Container from "@/lib/Container";
 import SectionHeading from "@/lib/SectionHeading";
 

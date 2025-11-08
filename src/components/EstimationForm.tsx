@@ -218,7 +218,7 @@ export default function EstimationForm() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12 text-lg font-bold transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-[#143C47] hover:bg-[#143C47] text-white h-12 text-lg font-bold transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

@@ -6,240 +6,210 @@ import SectionHeading from "@/lib/SectionHeading";
 const portfolioItems = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Modern Interior",
     category: "Interior Painting",
     aspectRatio: "4/3",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Elegant Living Space",
     category: "Wall Finishing",
     aspectRatio: "3/4",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Contemporary Design",
     category: "Feature Walls",
     aspectRatio: "16/9",
   },
   {
     id: 4,
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Luxury Bedroom",
     category: "Residential",
     aspectRatio: "3/4",
   },
   {
     id: 5,
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Minimalist Kitchen",
     category: "Cabinet Refinishing",
     aspectRatio: "4/3",
   },
   {
     id: 6,
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Cozy Living Room",
     category: "Color Consultation",
     aspectRatio: "16/9",
   },
   {
     id: 7,
-    image:
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Modern Bathroom",
     category: "Specialty Finishes",
     aspectRatio: "4/5",
   },
   {
     id: 8,
-    image:
-      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Stylish Workspace",
     category: "Commercial",
     aspectRatio: "3/4",
   },
   {
     id: 9,
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Rustic Kitchen",
     category: "Cabinet Refinishing",
     aspectRatio: "4/3",
   },
   {
     id: 10,
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Elegant Dining Room",
     category: "Interior Painting",
     aspectRatio: "3/4",
   },
   {
     id: 11,
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea8?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Modern Office Space",
     category: "Commercial",
     aspectRatio: "16/9",
   },
   {
     id: 12,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Cozy Reading Nook",
     category: "Residential",
     aspectRatio: "4/5",
   },
   {
     id: 13,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Luxury Master Suite",
     category: "Interior Painting",
     aspectRatio: "3/4",
   },
   {
     id: 14,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Contemporary Living",
     category: "Wall Finishing",
     aspectRatio: "4/3",
   },
   {
     id: 15,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Artistic Feature Wall",
     category: "Feature Walls",
     aspectRatio: "16/9",
   },
   {
     id: 16,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Spa-Like Bathroom",
     category: "Specialty Finishes",
     aspectRatio: "3/4",
   },
   {
     id: 17,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Industrial Loft",
     category: "Commercial",
     aspectRatio: "4/3",
   },
   {
     id: 18,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Family Room Makeover",
     category: "Color Consultation",
     aspectRatio: "3/4",
   },
   {
     id: 19,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Modern Entryway",
     category: "Interior Painting",
     aspectRatio: "4/5",
   },
   {
     id: 20,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Elegant Staircase",
     category: "Wall Finishing",
     aspectRatio: "16/9",
   },
   {
     id: 21,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Kids Room Design",
     category: "Residential",
     aspectRatio: "4/3",
   },
   {
     id: 22,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Restaurant Interior",
     category: "Commercial",
     aspectRatio: "3/4",
   },
   {
     id: 23,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Accent Wall Design",
     category: "Feature Walls",
     aspectRatio: "4/3",
   },
   {
     id: 24,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Guest Bedroom",
     category: "Interior Painting",
     aspectRatio: "3/4",
   },
   {
     id: 25,
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Rustic Farmhouse",
     category: "Exterior Painting",
     aspectRatio: "16/9",
   },
   {
     id: 26,
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea8?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Modern Studio",
     category: "Commercial",
     aspectRatio: "4/3",
   },
   {
     id: 27,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Vintage Library",
     category: "Interior Painting",
     aspectRatio: "3/4",
   },
   {
     id: 28,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Coastal Living Room",
     category: "Color Consultation",
     aspectRatio: "4/5",
   },
   {
     id: 29,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Urban Loft",
     category: "Commercial",
     aspectRatio: "16/9",
   },
   {
     id: 30,
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/hero-image.jpg",
     title: "Traditional Study",
     category: "Interior Painting",
     aspectRatio: "3/4",
@@ -257,8 +227,10 @@ export default function PortfolioSection({
   return (
     <Container variant="indigo" padding>
       {/* Header Section */}
-      <SectionHeading title="Work That Stands Out" description="We turn ordinary spaces into inspiring ones through careful craftsmanship and attention to detail."/>
-
+      <SectionHeading
+        title="Work That Stands Out"
+        description="We turn ordinary spaces into inspiring ones through careful craftsmanship and attention to detail."
+      />
 
       <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
         {portfolioItemsList.map((item) => (
