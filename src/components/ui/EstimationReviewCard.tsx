@@ -85,7 +85,7 @@ export default function EstimationReviewCard() {
           ))}
         </div>
 
-        <p className="text-[17px] leading-relaxed mb-4 min-h-[100px]">
+        <p className="text-[17px] text-white leading-relaxed mb-4 min-h-[100px]">
           &ldquo;{review.text}&rdquo;
         </p>
 

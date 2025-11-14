@@ -20,7 +20,7 @@ const variantStyles: Record<ContainerVariant, string> = {
   black: "bg-black",
   orange: "bg-orange-900",
   slate: "bg-slate-800",
-  indigo: "bg-indigo-800",
+  indigo: "bg-indigo-900",
 };
 
 interface ContainerProps {

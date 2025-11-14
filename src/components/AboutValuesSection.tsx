@@ -81,11 +81,15 @@ export default function AboutValuesSection() {
         {values.map((value, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-colors"
+            className="relative rounded-xl bg-white p-6 border border-gray-100 shadow-lg hover:shadow-xl overflow-hidden"
           >
-            <div className="mb-4">
+                        <span
+              className="absolute left-0 top-0 h-full w-1 rounded-l-xl"
+              style={{ background: 'var(--secondary-color)' }}
+            />
+            {/* <div className="mb-4">
               <value.icon className="size-6 text-gray-700" />
-            </div>
+            </div> */}
             <h3 className="text-lg font-semibold mb-3">{value.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               {value.description}

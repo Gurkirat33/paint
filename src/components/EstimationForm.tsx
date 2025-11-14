@@ -7,13 +7,7 @@ import { Phone, Calendar, CheckCircle, Loader2 } from "lucide-react";
 import TrustBadge from "./ui/TrustBadge";
 import EstimationReviewCard from "./ui/EstimationReviewCard";
 import Container from "@/lib/Container";
-
-const features = [
-  "15+ years professional experience",
-  "Free color consultation included",
-  "Get your quote within 24 hours",
-  "No pressure, just honest pricing",
-];
+import { features } from "@/data/estimation";
 
 interface FormData {
   name: string;
@@ -110,8 +104,9 @@ export default function EstimationForm() {
             </div>
           ))}
         </div>
-
-        <EstimationReviewCard />
+        <div className="hidden lg:block">
+          <EstimationReviewCard />
+        </div>
       </div>
 
       {/* Right Side - Form */}
@@ -262,6 +257,9 @@ export default function EstimationForm() {
             </p>
           </div>
         </form>
+      </div>
+      <div className="lg:hidden">
+        <EstimationReviewCard />
       </div>
     </Container>
   );

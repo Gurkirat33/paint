@@ -7,7 +7,7 @@ export default function GalleryPage() {
       <PageBanner
         title="Our Gallery"
         subtitle="Discover our finest work and see the quality craftsmanship that sets us apart"
-        backgroundImage="/paint.jpg"
+        backgroundImage="/demo.png"
       />
       <PortfolioSection galleryPage />
     </div>

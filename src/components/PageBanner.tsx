@@ -11,19 +11,19 @@ interface PageBannerProps {
 export default function PageBanner({
   title,
   subtitle,
-  backgroundImage = "/hero-image.jpg",
+  backgroundImage = "/demo.png",
   className = "",
 }: PageBannerProps) {
   return (
     <Container className={`relative overflow-hidden max-w-none ${className}`}>
       <div className="relative w-full min-h-[40vh] rounded-xl overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="w-full h-full absolute inset-0 z-0">
           <Image
-            src={backgroundImage}
+            src={"/demo.png"}
             alt="Background"
             fill
-            className="object-cover"
+            className="object-cover w-full h-full"
             priority
           />
           {/* Overlay */}

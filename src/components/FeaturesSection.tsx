@@ -2,10 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Container from "@/lib/Container";
 import SectionHeading from "@/lib/SectionHeading";
-
-interface Feature {
-  description: () => React.ReactNode;
-}
+import { Feature, features } from "@/data/features";
 
 const FeaturesCol = ({ features }: { features: Feature[] }) => {
   return (
@@ -15,76 +12,17 @@ const FeaturesCol = ({ features }: { features: Feature[] }) => {
           key={index}
           className="bg-white/10 p-4 rounded-xl flex-1 flex items-center"
         >
-          <p className="text-[19px] text-gray-400">{feature.description()}</p>
+          <p className="text-base md:text-[19px] text-gray-400">
+            <span className="text-[17px] md:text-xl font-semibold text-white">
+              {feature.title}
+            </span>{" "}
+            {feature.description}
+          </p>
         </div>
       ))}
     </div>
   );
 };
-
-const features: Feature[] = [
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Interior Wall & Trim Painting
-        </span>{" "}
-        smooth, beautiful finishes for walls, ceilings, doors, and trims.
-      </>
-    ),
-  },
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Exterior Painting & Protection
-        </span>{" "}
-        protect and refresh siding, stucco, brick, and wood surfaces against the
-        elements.
-      </>
-    ),
-  },
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Wallpaper & Wallcoverings
-        </span>{" "}
-        expert installation, removal & pattern matching for stylish spaces.
-      </>
-    ),
-  },
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Cabinet & Built-In Refinishing
-        </span>{" "}
-        breathe new life into your cabinets with durable, high-quality finishes.
-      </>
-    ),
-  },
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Surface Prep & Repairs
-        </span>{" "}
-        patching, sanding, caulking, leveling so finishes look flawless.
-      </>
-    ),
-  },
-  {
-    description: () => (
-      <>
-        <span className="text-xl font-semibold text-white">
-          Decks, Fences & Outdoor Wood/Metal Work
-        </span>{" "}
-        staining, painting and sealing exterior wood and metal structures.
-      </>
-    ),
-  },
-];
 
 export default function FeaturesSection() {
   return (
@@ -94,14 +32,14 @@ export default function FeaturesSection() {
         description="Bringing your walls to life with skilled painting and wallpaper craftsmanship."
       />
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-4">
         <FeaturesCol features={features.slice(0, 3)} />
         <Image
           src={"/hero-image.jpg"}
           alt={""}
           width={400}
           height={400}
-          className="rounded-xl w-full h-full object-cover"
+          className="hidden lg:blockrounded-xl w-full h-full object-cover"
         />
         <FeaturesCol features={features.slice(3)} />
       </div>

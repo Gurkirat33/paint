@@ -48,7 +48,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "sticky top-0 primary-color z-50 transition-all duration-300",
-        isScrolled ? "p-0" : "p-4"
+        isScrolled ? "p-0" : "p-3 md:p-4"
       )}
     >
       {/* Animated border container */}
