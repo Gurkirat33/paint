@@ -29,15 +29,35 @@ export default function MobileNav({
     <>
       {/* Mobile CTA and menu button */}
       <div className="md:hidden flex items-center gap-3 py-3">
-        <RainbowButton className="text-sm px-4 py-2">
+        <RainbowButton className="text-sm" size={"custom"}>
           Get Consultation
         </RainbowButton>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+          className="px-2 py-1 hover:bg-white/10 rounded-lg transition-colors"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <div className="flex flex-col gap-1.5">
+            <div
+              className={`bg-gray-800 transition-all duration-300 ${
+                isOpen ? "w-6 rotate-45 translate-y-2 h-[1.5px]" : "w-7.5 h-0.5"
+              }`}
+            ></div>
+            <div
+              className={`bg-gray-800 transition-all duration-300 ${
+                isOpen
+                  ? "w-6 -rotate-45 -translate-y-0 h-[1.5px]"
+                  : "w-7.5 h-0.5"
+              }`}
+            ></div>
+            <span
+              className={`text-[10px] font-medium text-gray-800 tracking-wider transition-all duration-300 ${
+                isOpen ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              MENU
+            </span>
+          </div>
         </button>
       </div>
 
@@ -135,4 +155,3 @@ export default function MobileNav({
     </>
   );
 }
-
